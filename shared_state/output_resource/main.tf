@@ -38,5 +38,5 @@ locals {
 
 resource "morpheus_cypher_secret" "foo_hashes_cypher_secret" {
   key   = "exampleworkspace/foo_hashes"
-  value = local.file_hashes
+  value = jsonencode({"dataoutput" : local.file_hashes})
 }
