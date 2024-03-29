@@ -36,7 +36,7 @@ locals {
   file_hashes = concat(local_file.foo.content_md5, local_file.foo2.content_md5)
 }
 
-resource "morpheus_cypher_secret" "foo_hash_cypher_secret" {
+resource "morpheus_cypher_secret" "foo_hashes_cypher_secret" {
   key   = "exampleworkspace/foo_hashes"
   value = local.file_hashes
 }
