@@ -14,12 +14,12 @@ provider "morpheus" {
 }
 
 resource "local_file" "foo" {
-  content  = "foo!"
+  content  = "foo!1"
   filename = "${path.module}/foo.bar"
 }
 
 resource "local_file" "foo2" {
-  content  = "foo!"
+  content  = "foo!2"
   filename = "${path.module}/foo2.bar"
 }
 
