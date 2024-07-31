@@ -2,7 +2,7 @@ terraform {
   required_providers {
     morpheus = {
       source  = "gomorpheus/morpheus"
-      version = "0.9.8"
+      version = "0.9.10"
     }
   }
 }
@@ -14,12 +14,12 @@ provider "morpheus" {
 }
 
 resource "local_file" "foo" {
-  content  = "foo!1"
+  content  = var.file_content_1
   filename = "${path.module}/foo.bar"
 }
 
 resource "local_file" "foo2" {
-  content  = "foo!2"
+  content  = var.file_content_1
   filename = "${path.module}/foo2.bar"
 }
 
